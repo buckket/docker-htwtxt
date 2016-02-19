@@ -6,7 +6,8 @@ WORKDIR $GOPATH/src/
 
 COPY ./htwtxt-${HTWTXT_VERSION}.tar.gz ./
 RUN tar xf htwtxt-${HTWTXT_VERSION}.tar.gz
-RUN go get htwtxt-${HTWTXT_VERSION}
+RUN ln -s htwtxt-${HTWTXT_VERSION} htwtxt
+RUN go get htwtxt
 
 RUN mkdir ~/htwtxt
 
