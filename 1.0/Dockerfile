@@ -10,6 +10,7 @@ RUN ln -s htwtxt-${HTWTXT_VERSION} htwtxt
 RUN go get htwtxt
 
 RUN mkdir ~/htwtxt
+VOLUME ~/htwtxt
 
 EXPOSE 8000
 
