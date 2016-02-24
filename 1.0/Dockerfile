@@ -1,5 +1,7 @@
 FROM golang:latest
 
+MAINTAINER buckket <buckket@cock.li>
+
 ENV HTWTXT_VERSION 1.0.5
 
 WORKDIR $GOPATH/src/
@@ -14,4 +16,4 @@ VOLUME ~/htwtxt
 
 EXPOSE 8000
 
-CMD ["htwtxt"]
+ENTRYPOINT ["htwtxt"]
